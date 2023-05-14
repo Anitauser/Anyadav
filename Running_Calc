@@ -1,0 +1,23 @@
+#calculator
+def add(x,y):
+  add=x+y
+  print("sum total",add)
+
+def sub(x,y):
+  sub=x-y
+  print("subs total",sub)
+
+def multi(x,y):
+  multi=x*y
+  print("multi total",multi)
+
+def divi(x,y):
+  divi=x/y
+  print("division total",divi)
+#main
+x=int(input("enter the number"))
+y=int(input("enter the number"))
+add(x,y)
+sub(x,y)
+multi(x,y)
+divi(x,y)
