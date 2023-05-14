@@ -1,0 +1,7 @@
+
+if str(x).isnumeric()==True:
+  print('it is number')
+elif str(x).isalpha()==True:
+  print('it is string')
+elif str(x).isalnum()==False:  
+  print('it has not both numbers and letters!!')
