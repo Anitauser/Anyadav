@@ -1,0 +1,6 @@
+#function to print the message given by the user
+def message():
+  userinput=input(str("enter the message:"))
+  print(userinput)
+  #main
+message()#calling function without arguments
