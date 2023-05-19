@@ -1,0 +1,18 @@
+class Animal:
+  def set_name(self,name):
+    self.name=name
+  def speak(self):
+        pass 
+class Dog(Animal):
+  def speak(self):
+    print("woof!")
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+dog=Dog()
+dog.set_name("Buddy")
+dog.speak()#output:woof! 
+
+cat=Cat()
+cat.set_name("Whiskers")
+cat.speak()#output:meow!
