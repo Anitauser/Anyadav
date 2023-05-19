@@ -1,0 +1,11 @@
+#class-triangle.find the area using a method-formula is: area=area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+class Triangle():
+  def __init__(self, b, h):
+    self.b=b
+    self.h=h
+  def area(self):
+      return self.b*self.h*0.5
+    #print( "result ",self.b,"and",self.h,"is",0.5*self.b*self.h)
+op=Triangle(9,10)
+op.area()
+print(op.area())   
