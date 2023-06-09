@@ -1,0 +1,121 @@
+#code for rock- paper scissors game
+user1=input("enter the choice (rock, paper,scissors): ")
+user2=input("enter the choice(rock,paper,scissors):")
+print("person1 chose",user1,"\n person2 chose",user2)
+user1=user1.lower()
+user2=user2.lower()
+if user1==user2:
+    print("both person selected",user1,"its a tie")
+elif user1=="rock":
+  if user2=="scissors":
+    print("rocks smashes scissors! person1 wins!")
+  else:
+    print("paper covers rock" "person2 wins")
+elif user1=="paper":
+  if user2=="rock":
+    print("paper cover rock, so person 1 wins")
+  else:
+    print("scissors cuts paper, so person 2 wins") 
+
+elif user1=="scissors":
+      if user2=="paper": 
+
+        print("scissors cuts paper ,and person 1 wins")
+      else:
+        print("rocks smashes scissors, so person 2 wins") 
+        
+        
+        
+        ###Vowel counts
+        word=input("enter a word")
+vowelcount=0
+lowercase=word.lower()
+if 'a' or 'e' or 'i' or'o' or'u' in lowercase:
+  vowelcount=lowercase.count('a')+ lowercase.count('e') +lowercase.count('i') +lowercase.count('o') +lowercase.count("u")
+  print("there are",vowelcount ,'vowels in' ,word)
+else:
+    print('there are no vowels in', word)  
+    
+    
+    
+    ###This program finds the average of 5 numbers given by the user.
+sum=0
+i=0
+while i<5:
+  number=float(input('Enter a number: '))
+  sum=sum+number
+  i+=1 # here we can write count also (count=0)
+avg=sum/(i)
+print('The average is',avg)
+
+
+#using continue statement to output odd number between 0 and 10
+num=0
+while num<10:
+  num=num+1
+  if num%2==0:
+    continue
+  print(num)
+  
+  
+  ## write a program to find sum of all even numbers until 80
+i = 0
+sum = 0
+#n = int(input("Enter the number n: "))
+
+while  i <= 80:
+    if i % 2 == 0:
+        sum=sum + i
+    i =i + 1
+        
+print("Sum of even numbers till 80:",sum)
+
+
+
+#write a code to find sum and average of 5 student marks using while loops
+marks=(70,60,90,80,70)
+i=0
+sum=0
+studentscount=5
+while i < studentscount:
+  sum=sum + marks[i]
+  i=i+1
+  
+avg=int(sum/studentscount)
+print('the sum of',studentscount,'students marks is:',sum) 
+print('the average of',studentscount,'students marks is:',avg)
+
+
+
+#This program finds the average of 5 numbers given by the user.
+sum=0
+i=0
+while i<5:
+  number=float(input('Enter a number: '))
+  sum=sum+number
+  i+=1 # here we can write count also (count=0)
+avg=sum/(i)
+print('The average is',avg)
+
+
+#write a code to display only even numbers from 33 to 70 using loop
+x=range(33,71)
+for n in x:
+  if n%2==0:
+      print(n, end='-')  
+      
+      ##finding even number
+      for i in range(33, 71):
+    
+    if i%2==0:
+        print(i,"even number")
+        
+        
+        #output multiplication table of 3,example 1*3 in loop
+for i in range(1,11):
+  print(i,'*3=',3*i)
+
+
+
+
+
