@@ -1,0 +1,119 @@
+##"""
+#Pets: Make several dictionaries, where the name of each dictionary is the 
+#name of a pet. In each dictionary, include the kind of animal and the owner’s 
+#name. Store these dictionaries in a list called pets. Next, loop through your list 
+#and as you do print everything you know about each pet.
+#"""
+
+tommy={'name':'tommy',
+       'animal':'dog',
+       'owner':'sam'}
+
+romy={'name':'romy',
+      'animal':'cat',
+      'owner':'raj'}
+
+sammy={'name':'sammy',
+       'animal':'cow',
+       'owner':'sunny'}
+
+pets=[tommy,romy,sammy]
+
+for i in pets:
+   
+   print('\n Pet :', i['name'].title())
+   print("\tName:",i['name'].title() , "\n\tAnimal:",i['animal'].title(), "\n\tOwner:",i['owner'].title())
+   
+   
+ ##cities code  
+cities={
+ 'Toronto':{'country':'canada',
+            'population':'1million',
+            'facts':'it is know for the amazing culture'
+ },
+ 'bombay':{'country':'india',
+           'population':'1.5million',
+           'facts':'it is know for its street food '
+  },
+ 'sydney':{'country':'australia',
+           'population':'2million',
+           'facts':'it is know for its architecture',
+ },
+}
+
+for city, info in cities.items():
+  print("\nCity:" +city)
+  for key,value in info.items():
+    print(key.title(),value)
+    
+    
+    #make a dictionary of a coffee shop menu with prices and print the keys and values of it
+#example:
+#coffee:12$
+#tea
+coffeeshopmenu={'coffee':'12$',
+                'tea':'7$',
+                'iced coffee':'13$'}
+for n in coffeeshopmenu.keys():
+  print(n)  
+for y in coffeeshopmenu.values():
+    print(y)
+for n,y in coffeeshopmenu.items():
+  print(n+ ":"+y)   
+
+
+#'''
+#Make a dictionary called favorite_places. 
+#Think of three names to use as keys in the dictionary, and store one to three favorite places 
+#for each person. Loop through the dictionary, and print each person’s name and their favorite places
+#
+#'''
+
+favorite_places={'mona':['museum','gym','office'],
+                'jonh':['church','coffeshop','farmhouse'],
+                 'sam':['garden','ownhouse','greece']
+}
+for x,y in favorite_places.items():
+  print("\n" ,x.title() , ',''my favorite places is:')
+  for places in y:
+    print('-',places.title())
+    
+    
+   ###favorite number code in Dictionary 
+    
+    favnum={ 
+    'anna':3,
+    'kavi':11,
+    'rachel':4,
+    'lara':9,
+    'reina':6
+}
+for name, number in favnum.items():
+  print(name.title()+ "'s favorite number is "+str(number) + '.')
+print('\n\n')
+
+
+###b)Modify your program so each person can have more than one favorite number. Then 
+#print each person’s name along with their favorite numbers. #
+#""" for comma it work with list and  plus with dict.#
+
+favnum={'nova':[4,2,2],
+        'lava':[2,3,3,4],
+        'ryan':[1,2,3,4,5],
+        'sohan':[2,6,9,7,6,],
+        'seema':[5,6]
+ }
+#for people,numbers in favnum.items():
+  #print(people.title(),'likes the following numbers:')
+  #for i in range(len(numbers)):
+    #print('\t',numbers[i])
+  #print('\t',numbers[i])
+
+for x,y in favnum.items():
+  print(x,  "said my favroite is number is: " )
+  for number in y:
+    print(number)
+
+
+    
+    
