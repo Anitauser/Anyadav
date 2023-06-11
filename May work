@@ -1,0 +1,79 @@
+def fifth_power(num):
+  return num ** 5
+
+# main code starts here
+number = float(input("Enter a number: "))
+result = fifth_power(number)
+print("{} raised to the power of 5 is {}".format(number, result))
+
+
+###case 1-positional arguments
+#order of the arguments matter!!
+#pet description
+def mypet(typepet,namepet):
+  print("your",typepet,namepet,"is adorable!")
+  #main
+mypet("dog","coco")
+mypet("liliy","cat")#oopsies!
+
+
+#case2- keyword arguments
+#order of the arguments does not matter anymore.
+#when you use the [parameter_name=value] in your main code.
+
+
+def mypet(typepet,namepet):
+  print("yours",typepet,namepet,"is adorable!")
+  #main
+mypet(typepet="dog",namepet="coco")#while calling in assigning the typepet.
+mypet(namepet="honey",typepet="cat")
+
+
+
+mypet("kitty",namepet="melowrd")
+x=input("enter the name of your rabbit:")
+mypet("rabbit",namepet=x)
+
+
+
+def power(x):
+  p=x**5
+  return p
+
+
+#main
+s=int(input("Enter a number"))
+result=power(s)
+print(result)
+
+
+
+#adding default values
+def mypet(namepet,typepet='dog'):
+  print("yours",typepet,namepet,"is adorable!")
+  #main
+mypet("silly","cat")
+mypet("wooly")
+
+
+#create a function that calculates fahrenheit from temperature in celsius
+#calculates from temperature  celsius in fahrenheit
+#in the main program ,ask the user if he wants to convert in fahrenheit or celcius and output the conversion.
+def celsius_to_fahrenheit(celsius):
+  fahrenheit = (celsius * 9/5) + 32
+  return fahrenheit
+  #main
+temperature=float(input("enter the temperature:"))
+unit=input("enter the c for celcius and f for fahrenheit")
+result=celsius_to_fahrenheit(temperature)
+print("the temperature from celsius to fahrenheit:",result,'F')
+
+
+
+def fahrenheit_to_celsius(fahrenheit):
+  celsius = (fahrenheit - 32) * 5/9
+  return celsius
+    #main
+x=float(input("enter the temperature in fahrenheit:"))
+result=fahrenheit_to_celsius(x)
+print("the temperature from fahrenheit_to_celsius :",result)
