@@ -1,0 +1,76 @@
+import matplotlib.pyplot as plt##pyplot submodule ,and usaually imported under plt. Now the pyplot package can be referred to as 
+import numpy as np#numerical python
+xpoints=np.array([0,2,3,4,6,4,3.5,3,2,1,0])
+ypoints=np.array([0,1,2,3.5,4,5,4,2.5,2,1,0])
+
+plt.plot(xpoints,ypoints)##calling the function.
+plt.show()
+
+
+
+
+###Q2
+from matplotlib import legend
+#from matplotlib import style
+def bar_chart(numbers,labels,pos):
+    #style.use("ggplot")
+    plt.barh(pos,numbers,color='cyan', edgecolor='m',linewidth=5,alpha=0.9)##visible=false if we dont want to  show bar
+    
+    plt.xticks(ticks=pos,labels=labels)### FOR BLACK USE K  //while doing horizontal we cannot used width 
+    plt.ylabel("number of vehicles")
+    plt.show()
+numbers=[2,1,4,6]
+labels=['Electric','Solar','Diesel','Unleaded']
+pos=list(range(4))
+plt.legend('cars')
+bar_chart(numbers,labels,pos)
+
+
+
+###Q3
+
+import matplotlib.pyplot as plt###kavita code
+def bar_chart(numbers,labels,pos):
+ bars=plt.bar(pos,numbers,color=["green","yellow","blue","orange"])
+ plt.xticks(ticks=pos,labels=labels)
+ loc = ['outside upper right', 'center', 'lower']
+ plt.ylabel("Popularity")
+ plt.xlabel("Language")
+ plt.legend(bars,labels,loc='center')
+ 
+ plt.show()
+numbers=[2,3,4,5]
+labels=["Java","ruby","C","C++"]
+pos=list(range(4))
+bar_chart(numbers,labels,pos)
+
+
+
+##Q4
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+mycolors = ["black", "hotpink", "b", 'green']
+
+plt.pie(y,  labels=mylabels, colors=mycolors)
+plt.show() 
+
+##Q5 BAR GRAPH
+
+def bar_chart(numbers, labels, pos, color):##Anastasiya
+  #plt.bar(pos, numbers, color=color)
+  bars = plt.bar(pos, numbers, color=color)
+  plt.xticks(ticks=pos, labels=labels)
+  plt.ylabel("Number of users")
+  plt.xlabel("Programming language")
+  plt.title("Popularity of programming languages in users")
+  plt.legend(bars, labels, loc=2)
+  plt.show()
+
+numbers = [10, 16, 40, 3]
+labels = ["Python", "C++", "Java", "Pascal"]
+color = ["magenta", "yellow", "teal", "green"]
+pos = list(range(len(numbers)))
+bar_chart(numbers, labels, pos, color)
