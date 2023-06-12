@@ -1,0 +1,74 @@
+# lets create a simple class called Dog
+# By convention, capitalized names refer to classes
+
+class Dog():
+
+  # this is a constructor - a method which is called automatically 
+  # when an object is created.
+  def __init__(self, n, age):  
+    # name and age are attributes here!!
+    self.name = n
+    self.age = age
+    self.breed = "husky"
+    print("testing")
+    
+  
+  def printInfo(self):
+    print("Your dog", self.name, " is ", self.age, "years old.")
+    print("Your dog is a",self.breed,".")
+
+  def sit(self):
+    print(self.name, " is now sitting.")
+    
+    ###### BMI CALCULATOR
+    
+#Create a function that calculates the BMI of a person and returns if the BMI shows normal, 
+#overweight, underweight or obesity.
+#In the main code, ask the user for input and show the BMI output in a sentence.
+
+#BMI Categories:
+#Underweight  <18.5
+#Normal weight  18.5–24.9
+#Overweight  25–29.9
+#Obesity  BMI of 30 or greater
+
+#BMI calculation: weight in kilograms divided by height in meters squared
+
+#Challenge: append the BMI to a list in the main program. Keep appending the BMI of many
+#people to that list until the user says no to adding more BMI. 
+
+
+def calculate_bmi(weight, height):
+  bmi = weight / (height ** 2)
+  return bmi
+  if bmi < 18.5:
+    return "Underweight"
+  elif bmi < 24.9:
+    return "Normal weight"
+  elif bmi < 29.9:
+    return "Overweight"
+  else:
+    return "Obesity"
+
+# Main code starts here
+bmi_list = []
+
+while True:
+  weight = float(input("Enter weight in kilograms: "))
+  height = float(input("Enter height in meters: "))
+  name=input("enter the name of the person")
+  bmi= calculate_bmi(weight, height)
+  bmi_list.append((name,bmi))
+
+  
+  response = input("Do you want to calculate BMI for another person? (yes/no): ")
+  if response.lower() == "no":
+    break
+
+print("BMI LIST:")
+for name,bmi in bmi_list:
+  print(f"Name:{name},BMI:{bmi}")# keeping f give us the name  of any person other wise it wont give name just type name in output
+  
+  
+  
+  
