@@ -1,0 +1,96 @@
+names=['Anita','Sunita','kavita']
+search=input("enter the name to search for:")
+search=search.title()
+
+if search in names:
+  print(search , 'is number',names.index(search)+ 1, 'on the list')
+else:
+  print("search person not in the list") 
+  
+ # Q2 
+  found=False
+i=0
+names=['Elena','Sonia','Mary','Lopamudra','Anita','Anastasia','Anita','Tanya','Jessica','Adriana','Kanita']
+search=input('Enter name to find in list: ')
+while not found and i<len(names):
+  if search.title()==names[i]:
+    found=True
+    print(search,'is number',i+1,'on the list.')
+    break
+  else:
+    i+=1
+if not found:
+  print(search,'is not on the list')
+  
+  #       #         #
+  
+  #create two functions that finds and returns the largest 
+#and returns the largest and the smallest numbers in a given list of positive numbers
+
+
+
+numbers=[1,2,3,4,5,6,7]
+def largest_number(numbers):
+    return max(numbers)
+ 
+def smallest_number(numbers):
+      return min(numbers)
+print("the largest number is:",largest_number(numbers) ,'and','the smallest number is:',smallest_number(numbers))
+ 
+ ##     ###
+ class circle:
+  def __init__(self,r):
+    self.r=r
+  def circle_Area(self):
+    area=3.14*(self.r*self.r)
+    return area
+  def circle_perimeter(self):
+    perimeter=2*3.14*self.r
+    return perimeter
+r=int(input("Enter the radius to find area and perimeter of circle:"))
+c=circle(r)
+print("The area and perimeter of circle is",c.circle_Area(), "and" ,c.circle_perimeter())
+
+
+
+# ASSIGNMENT #
+class Book:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+        
+    def view(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+        print(f"Price: ${self.price}")
+
+# Testing the Book class
+book1 = Book('The Great Gatsby', 'F. Scott Fitzgerald', 12.99)
+book2 = Book('To Kill a Mockingbird', 'Harper Lee', 10.99)
+
+book1.view()
+print()  # Empty line for separation
+book2.view()
+
+# lets create a simple class called Dog
+# By convention, capitalized names refer to classes
+## CLASS OBJECT
+class Dog():
+
+  # this is a constructor - a method which is called automatically 
+  # when an object is created.
+  def __init__(self, n, age):  
+    # name and age are attributes here!!
+    self.name = n
+    self.age = age
+    self.breed = "husky"
+    print("testing")
+    
+  
+  def printInfo(self):
+    print("Your dog", self.name, " is ", self.age, "years old.")
+    print("Your dog is a",self.breed,".")
+
+  def sit(self):
+    print(self.name, " is now sitting.")
