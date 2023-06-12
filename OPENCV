@@ -1,0 +1,58 @@
+##CONNECTING TO COLAB BOOK
+
+from google.colab import drive
+drive.mount('/content/gdrive') 
+import sys #system- specific functions
+sys.path.append('/content/gdrive/MyDrive/Colab Notebooks')  # you can give your folders path 
+
+import os #user interactions with operation systems 
+os.chdir('/content/gdrive/MyDrive/Colab Notebooks') # currently working path
+
+# importing libraries
+import cv2 # OPENCV
+import numpy as np
+from google.colab.patches import cv2_imshow
+from matplotlib import *
+
+# reading image
+img = cv2.imread("face.jpg")
+#print(img.shape)
+img = cv2.resize(img, (120,140))
+# display image using openCV
+cv2_imshow(img)
+#color_edges=cv2.Canny(img,threshold1=10,threshold2=50)### 
+#cv2_imshow(color_edges)
+#print(color_edges.shape)
+
+# importing libraries
+import cv2 # OPENCV
+import numpy as np
+from google.colab.patches import cv2_imshow
+from matplotlib import *
+
+# reading image
+img = cv2.imread("love.jpg")
+#print(img.shape)
+img = cv2.resize(img, (120,140))
+# display image using openCV
+cv2_imshow(img)
+#color_edges=cv2.Canny(img,threshold1=10,threshold2=50)### 
+#cv2_imshow(color_edges)
+#print(color_edges.shape)
+
+
+# importing libraries
+import cv2 # OPENCV
+import numpy as np
+from google.colab.patches import cv2_imshow
+from matplotlib import *
+
+# reading image
+img = cv2.imread("love.jpg")
+#print(img.shape)
+img = cv2.resize(img, (120,140))
+# display image using openCV
+cv2_imshow(img)
+#color_edges=cv2.Canny(img,threshold1=10,threshold2=50)### 
+#cv2_imshow(color_edges)
+#print(color_edges.shape)
